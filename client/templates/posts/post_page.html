@@ -1,0 +1,15 @@
+<template name="postPage">
+{{#contentFor "headerButtonLeft"}}
+    {{>ionNavBackButton path="postsList"}}
+{{/contentFor}}
+
+  {{#contentFor "headerTitle"}}
+    <h1 class="title">{{title}}</h1>
+  {{/contentFor}}
+
+  {{#ionView}}
+    {{#ionContent class="padding"}}
+      {{>postItem}}
+    {{/ionContent}}
+  {{/ionView}}
+</template>
