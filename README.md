@@ -1,2 +1,3 @@
-# meteor-ios-dev
-Meteor / iOS playground
+# Meteor and iOS playground
+
+Hacking on Meteor + Ionic.
