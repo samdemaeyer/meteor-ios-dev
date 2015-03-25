@@ -1,0 +1,19 @@
+<template name="postSubmit">
+	{{#contentFor "headerButtonLeft"}}
+    {{>ionNavBackButton path="postsList"}}
+  {{/contentFor}}
+
+  {{#contentFor "headerTitle"}}
+    <h1 class="title">Add Recipe</h1>
+  {{/contentFor}}
+
+  {{#ionView}}
+    {{#ionContent class="padding"}}
+      {{#autoForm collection="Posts" doc=post id="add-form" type="insert"}}
+      {{> afQuickField name='title' placeholder="schemaLabel"}}
+      {{> afQuickField name='url' placeholder="schemaLabel"}}
+      <button type="submit" class="button button-block button-balanced">Submit</button>
+      {{/autoForm}}
+    {{/ionContent}}
+  {{/ionView}}
+</template>
