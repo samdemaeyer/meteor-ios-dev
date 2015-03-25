@@ -14,17 +14,19 @@
   {{/contentFor}}
 
   {{#ionView}}
-    {{#ionContent}}
+    {{#ionContent class="padding"}}
+    <button class="button button-block button-positive" data-action="showActionSheet">
+      Show Action Sheet
+    </button>
       {{#ionList}}
         {{#each posts}}
-          {{#ionItem path="postPage"}}
-            {{> postItem}}
+          {{#ionItem path="postPage" class="item item-thumbnail-left"}}
+            <img src="{{imageUrl}}" />
+            <h2><a href="{{url}}">{{title}}</a></h2>
+            <p>{{domain}}</p>
           {{/ionItem}}
         {{/each}}
       {{/ionList}}
-      <button class="button button-large button-stable" data-action="showActionSheet">
-      Show Action Sheet
-    </button>
     {{/ionContent}}
   {{/ionView}}
 </template>
