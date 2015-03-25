@@ -1,7 +1,11 @@
 <template name="_myModal">
-  {{#ionModal title="Account"}}
-    <div class="padding">
-      Modal Content Goes Here
-    </div>
-  {{/ionModal}}
+	{{#ionModal title="Account"}}
+		{{#if currentUser}}
+			<div class="padding">
+			    <button class="button button-positive button-block" data-action="logout">Log Out</button>
+			</div>
+		{{else}}
+			{{> atForm}}
+		{{/if}}
+	{{/ionModal}}
 </template>
