@@ -1,18 +1,18 @@
 //colors
-$color_scarlet: #e42112;
+$color_red: #e42112;
 
 @import '.meteor/local/build/programs/server/assets/packages/meteoric_ionic-sass/ionic';
 @import '.meteor/local/build/programs/server/assets/packages/meteoric_ionicons-sass/ionicons';
 
 a {
     text-decoration: none;
-    color: $color_scarlet;
+    color: $color_red;
     &:hover {
         text-decoration: none;
-        color: $color_scarlet;
+        color: $color_red;
     }
     &:visited {
         text-decoration: none;
-        color: $color_scarlet;
+        color: $color_red;
     }
 }
