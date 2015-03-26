@@ -1,19 +1,18 @@
 <template name="postSubmit">
-	{{#contentFor "headerButtonLeft"}}
-    {{>ionNavBackButton path="postsList"}}
-  {{/contentFor}}
-
-  {{#contentFor "headerTitle"}}
-    <h1 class="title">Add Recipe</h1>
-  {{/contentFor}}
-
-  {{#ionView}}
-    {{#ionContent class="padding"}}
-      {{#autoForm collection="Posts" doc=post id="add-form" type="insert"}}
-      {{> afQuickField name='title' placeholder="schemaLabel"}}
-      {{> afQuickField name='url' placeholder="schemaLabel"}}
-      <button type="submit" class="button button-block button-balanced">Submit</button>
-      {{/autoForm}}
-    {{/ionContent}}
-  {{/ionView}}
+    {{#contentFor "headerButtonLeft"}} {{>ionNavBackButton path="postsList"}} {{/contentFor}} {{#contentFor "headerTitle"}}
+    <h1 class="title">Add Recipe</h1> {{/contentFor}} {{#ionView}} {{#ionContent class="padding"}}
+    <div class="list">
+        <form class="main form page">
+            <label class="item item-input item-stacked-label">
+                <span class="input-label">Title</span>
+                <input name="title" id="title" type="text" value="" placeholder="Title" />
+            </label>
+            <label class="item item-input item-stacked-label">
+                <span class="input-label">URL</span>
+                <input name="url" id="url" type="text" value="" placeholder="URL" />
+            </label>
+            <input type="submit" value="Submit" class="button button-block button-balanced" />
+        </form>
+    </div>
+    {{/ionContent}} {{/ionView}}
 </template>
