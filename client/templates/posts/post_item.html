@@ -1,20 +1,23 @@
 <template name="postItem">
     <div class="card">
-        <div class="item">
+        <div class="item item-avatar">
+            <img src="{{imageUrl}}" alt="">
             <h2>{{title}}</h2>
             <p>March 23, 2015</p>
         </div>
         <div class="item item-body">
+            <img src="{{imageUrl}}" alt="" class="full-image">
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque velit, esse similique qui aliquid enim in magni quo autem laboriosam ratione dolor!</p>
             <p>{{domain}}</p>
-            <p>
+            <p> 
+                submitted by: {{author}}
                 <a href="#" class="subdued">1 Like</a>
                 <a href="#" class="subdued">5 Comments</a>
             </p>
         </div>
         <div class="item tabs tabs-secondary tabs-icon-left">
-            <a class="tab-item" href="#like">
-                <i class="icon ion-thumbsup"></i> Like
+            <a class="tab-item" href="{{pathFor 'postEdit'}}">
+                <i class="icon ion-edit"></i> Edit
             </a>
             <a class="tab-item" href="#comment">
                 <i class="icon ion-chatbox"></i> Comment

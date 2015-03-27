@@ -20,7 +20,8 @@
     </button>
       {{#ionList}}
         {{#each posts}}
-          {{#ionItem path="postPage"}}
+          {{#ionItem path="postPage" class="item-avatar"}}
+            <img src="{{imageUrl}}" alt="">
             <h2><a href="{{url}}">{{title}}</a></h2>
             <p>{{domain}}</p>
           {{/ionItem}}
