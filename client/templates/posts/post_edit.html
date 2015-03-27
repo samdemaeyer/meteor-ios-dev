@@ -1,0 +1,19 @@
+<template name="postEdit">
+  {{#contentFor "headerButtonLeft"}} {{>ionNavBackButton path="postsList"}} {{/contentFor}} {{#contentFor "headerTitle"}}
+    <h1 class="title">{{title}}</h1> {{/contentFor}} {{#ionView}} {{#ionContent class="padding"}}
+    <div class="list">
+        <form class="main edit form page">
+            <label class="item item-input item-stacked-label">
+                <span class="input-label">Title</span>
+                <input name="title" id="title" type="text" value="{{title}}" />
+            </label>
+            <label class="item item-input item-stacked-label">
+                <span class="input-label">URL</span>
+                <input name="url" id="url" type="text" value="{{url}}" />
+            </label>
+            <input type="submit" value="Submit" class="button button-block button-balanced submit" />
+            <input value="Delete" class="button button-block button-assertive delete" href="#" />
+        </form>
+    </div>
+    {{/ionContent}} {{/ionView}}
+</template>
