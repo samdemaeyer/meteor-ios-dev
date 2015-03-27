@@ -1,18 +1,38 @@
 //colors
-$color_red: #e42112;
+$color_assertive: #ef473a;
+$alice_blue: aliceblue;
+$white: #ffffff;
 
+//imports
 @import '.meteor/local/build/programs/server/assets/packages/meteoric_ionic-sass/ionic';
 @import '.meteor/local/build/programs/server/assets/packages/meteoric_ionicons-sass/ionicons';
 
+//styles
 a {
     text-decoration: none;
-    color: $color_red;
+    color: $color_assertive;
     &:hover {
         text-decoration: none;
-        color: $color_red;
+        color: $color_assertive;
+    }
+    &:focus {
+        text-decoration: none;
+        color: $color_assertive;
+    }
+    &:active {
+        text-decoration: none;
+        color: $color_assertive;
     }
     &:visited {
         text-decoration: none;
-        color: $color_red;
+        color: $color_assertive;
     }
+}
+
+.content {
+    background: $alice_blue;
+}
+
+.item-stacked-label {
+    background: $white;
 }
