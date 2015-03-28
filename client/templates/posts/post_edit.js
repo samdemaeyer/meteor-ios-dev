@@ -14,9 +14,9 @@ Template.postEdit.events({
         }, function(error) {
             if (error) {
                 IonPopup.alert({
-                	title: 'Bummer!',
-                	template: error.reason,
-                	okText: 'Got it Chef!',
+                    title: 'Bummer!',
+                    template: error.reason,
+                    okText: 'Got it Chef!',
                 });
             } else {
                 Router.go('postPage', {
@@ -28,12 +28,12 @@ Template.postEdit.events({
 
     'click .delete': function(e) {
         e.preventDefault();
+        var currentPostId = this._id;
 
         IonPopup.confirm({
             title: 'Delete recipe',
             template: 'Are you sure?',
             onOk: function() {
-                var currentPostId = this._id;
                 Posts.remove(currentPostId);
                 Router.go('postsList');
             },
