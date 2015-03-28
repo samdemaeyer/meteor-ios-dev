@@ -10,15 +10,17 @@
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque velit, esse similique qui aliquid enim in magni quo autem laboriosam ratione dolor!</p>
             <p>{{domain}}</p>
             <p>
-                submitted by: {{author}} |
-                <a href="#" class="subdued">1 Like</a>
-                <a href="#" class="subdued">5 Comments</a>
+                submitted by: {{author}}
+                <a href="#" class="subdued" style="float: right;">&nbsp;5 Comments</a>
+                <a href="#" class="subdued" style="float: right;">1 Like</a>
             </p>
         </div>
         <div class="item tabs tabs-secondary tabs-icon-left">
+            {{#if ownPost}}
             <a class="tab-item" href="{{pathFor 'postEdit'}}">
                 <i class="icon ion-edit"></i> Edit
             </a>
+            {{/if}}
             <a class="tab-item" href="#comment">
                 <i class="icon ion-chatbox"></i> Comment
             </a>
