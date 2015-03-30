@@ -22,9 +22,6 @@ Template.commentSubmit.events({
             postId: template.data._id,
         };
 
-        var user = Meteor.user();
-        var author = user.emails[0].address;
-
         var errors = {};
         if (!comment.body) {
             errors.body = "Please write some content";
