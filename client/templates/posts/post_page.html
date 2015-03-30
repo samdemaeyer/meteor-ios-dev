@@ -5,7 +5,23 @@
 
   {{#ionView}}
     {{#ionContent}}
-      {{>postItem}}
+		{{>postItem}}
+		<div class="card">
+			{{#if currentUser}}
+				{{> commentSubmit}}
+			{{else}}
+			<p style="margin: 20px;">Please log in to leave a comment.</p>
+			{{/if}}
+		</div>
+		<div class="card">
+		{{#ionList}}
+			{{#each comments}}
+				{{#ionItem}}
+					{{> commentItem}}
+				{{/ionItem}}
+			{{/each}}
+		{{/ionList}}
+		</div>
     {{/ionContent}}
   {{/ionView}}
 </template>

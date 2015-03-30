@@ -12,5 +12,10 @@ Template.postItem.helpers({
         var getName = author.match(/^([^@]*)@/);
         var username = getName ? getName[1] : null;
         return username;
+    },
+    commentsCount: function() {
+        return Comments.find({
+            postId: this._id
+        }).count();
     }
 });

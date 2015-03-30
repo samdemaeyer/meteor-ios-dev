@@ -1,17 +1,15 @@
 <template name="postItem">
     <div class="card">
-        <div class="item item-avatar">
-            <img src="{{imageUrl}}" alt="">
+        <div class="item">
             <h2>{{title}}</h2>
             <p>March 23, 2015</p>
         </div>
         <div class="item item-body">
-            <img src="{{imageUrl}}" alt="" class="full-image">
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque velit, esse similique qui aliquid enim in magni quo autem laboriosam ratione dolor!</p>
             <p>{{domain}}</p>
             <p>
                 submitted by: {{author}}
-                <a href="#" class="subdued" style="float: right;">&nbsp;5 Comments</a>
+                <a href="#" class="subdued" style="float: right;">&nbsp;{{commentsCount}} comments</a>
                 <a href="#" class="subdued" style="float: right;">1 Like</a>
             </p>
         </div>
