@@ -10,15 +10,11 @@ Template.postSubmit.events({
         Meteor.call('postInsert', post, function(error, result) {
             
             if (error) {
-                return alert(error.reason);
+                return throwError(error.reason);
             }
 
             if (result.postExists) {
-                IonPopup.alert({
-                    title: 'Opps!',
-                    template: 'That recipe already exists.',
-                    okText: 'Got it Chef!',
-                });
+                throwError('That recipe already exists.');
             }
 
             else {

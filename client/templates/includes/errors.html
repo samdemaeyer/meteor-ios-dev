@@ -4,8 +4,17 @@
     </div>
 </template>
 <template name="error">
-    <div class="alert alert-danger" role="alert">
-        <button type="button" class="close" data-dismiss="alert">&times;</button>
-        {{message}}
-    </div>
+    <script>
+    IonPopup.show({
+        title: 'Error Popup',
+        template: '{{message}}',
+        buttons: [{
+            text: 'Close me',
+            type: 'button-positive',
+            onTap: function() {
+                IonPopup.close();
+            }
+        }]
+    });
+    </script>
 </template>

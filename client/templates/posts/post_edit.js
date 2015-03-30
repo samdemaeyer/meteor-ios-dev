@@ -13,11 +13,7 @@ Template.postEdit.events({
             $set: postProperties
         }, function(error) {
             if (error) {
-                IonPopup.alert({
-                    title: 'Bummer!',
-                    template: error.reason,
-                    okText: 'Got it Chef!',
-                });
+                throwError(error.reason);
             } else {
                 Router.go('postPage', {
                     _id: currentPostId
